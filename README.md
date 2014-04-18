@@ -8,7 +8,7 @@ To get started with your own secure VPN, simply execute the following commands a
 
 	$ yum install -y git
 	$ cd /opt && git clone git://github.com/arjitc/VPN.git
-	$ cd VPN && bash vpn-setup-vanilla.sh
+	$ cd VPN && bash install.sh
 
 
 ## Original Author
