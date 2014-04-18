@@ -17,7 +17,8 @@ VPN_IP=`curl ipv4.icanhazip.com>/dev/null 2>&1`
 VPN_USER="myuser"
 VPN_PASS="mypass"
 
-VPN_LOCAL="192.168.0.150"
+##VPN_LOCAL="192.168.0.150"
+VPN_LOCAL=`curl ipv4.icanhazip.com>/dev/null 2>&1`
 VPN_REMOTE="192.168.0.151-200"
 
 yum -y groupinstall "Development Tools"
@@ -35,8 +36,7 @@ echo "localip $VPN_LOCAL" >> /etc/pptpd.conf # Local IP address of your VPN serv
 echo "remoteip $VPN_REMOTE" >> /etc/pptpd.conf # Scope for your home network
 
 echo "ms-dns 8.8.8.8" >> /etc/ppp/options.pptpd # Google DNS Primary
-echo "ms-dns 209.244.0.3" >> /etc/ppp/options.pptpd # Level3 Primary
-echo "ms-dns 208.67.222.222" >> /etc/ppp/options.pptpd # OpenDNS Primary
+echo "ms-dns 8.8.4.4" >> /etc/ppp/options.pptpd # Google DNS Secondary
 
 echo "$VPN_USER pptpd $VPN_PASS *" >> /etc/ppp/chap-secrets
 
@@ -45,7 +45,7 @@ echo "iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE" >> /etc/rc.local
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 service iptables save
 service iptables restart
-
+iptables -t nat -A POSTROUTING -j SNAT --to-source $VPN_IP
 service pptpd restart
 chkconfig pptpd on
 
