@@ -1,7 +1,6 @@
 # VPN
 
-Bare Bones (PPTP) VPN Installer for CentOS
-See [http://drewsymo.com/networking/vpn/install-ptpp/](http://drewsymo.com/networking/vpn/install-ptpp/) for more information.
+Bare Bones (PPTP) VPN Installer for CentOS OpenVZ ONLY
 
 ## Installation
 
@@ -11,9 +10,8 @@ To get started with your own secure VPN, simply execute the following commands a
 	$ cd /opt && git clone git://github.com/drewsymo/VPN.git
 	$ cd VPN && bash vpn-setup-vanilla.sh
 
-If you're on Linode, you can simply rebuild your instance with the `PPTP VPN Installer` [stackscript](http://www.linode.com/stackscripts/view/?StackScriptID=6346).
 
-## Author
+## Original Author
 
 **Drew Morris**
 
@@ -21,7 +19,6 @@ If you're on Linode, you can simply rebuild your instance with the `PPTP VPN Ins
 + [Twitter](http://twitter.com/drewsymo)
 + [Google+](https://plus.google.com/u/0/114153589610660530694)
 
-## Recommended Providers
+## Fixes/latest by
 
-+ [Fastdot Cloud VPS Hosting](http://fastdot.com) (Australia, Asia-Pacific, UK, USA)
-+ [AUSWEB VMware Hosting](http://www.ausweb.com.au) (Australia)
+**Arjit*
