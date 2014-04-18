@@ -21,4 +21,4 @@ To get started with your own secure VPN, simply execute the following commands a
 
 ## Fixes/latest by
 
-**Arjit*
+**Arjit**
