@@ -12,13 +12,13 @@
 
 (
 
-VPN_IP=`curl ipv4.icanhazip.com>/dev/null 2>&1`
+VPN_IP=`curl ipv4.icanhazip.com`
 
 VPN_USER="myuser"
 VPN_PASS="mypass"
 
 ##VPN_LOCAL="192.168.0.150"
-VPN_LOCAL=`curl ipv4.icanhazip.com>/dev/null 2>&1`
+VPN_LOCAL=`curl ipv4.icanhazip.com`
 VPN_REMOTE="192.168.0.151-200"
 
 yum -y groupinstall "Development Tools"
