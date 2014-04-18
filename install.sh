@@ -1,14 +1,14 @@
 #!/bin/bash -x
 
 #
-# drewsymo/VPN
+# drewsymo/VPN  && arjitc/VPN
 #
 # Installs a PPTP VPN-only system for CentOS
 #
 # @package VPN 2.0
 # @since VPN 1.0
 # @author Drew Morris
-#
+# @Fixes/Latest by Arjit
 
 (
 
